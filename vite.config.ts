@@ -1,5 +1,5 @@
 import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react-swc"; // Consider switching to @vitejs/plugin-react if SWC issues persist
+import react from "@vitejs/plugin-react-swc"; 
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 
@@ -8,8 +8,8 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
-  // Updated base path for GitHub Pages
-  base: process.env.BASE_PATH || "/your-repo-name/", // Replace 'your-repo-name' with your actual repository name
+  // Critical GitHub Pages configuration
+  base: "/kanyoza-port/", // Exactly matches your repository name
   plugins: [
     react(),
     mode === 'development' && componentTagger(),
@@ -19,10 +19,27 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  // Optional: Add build configuration
   build: {
     outDir: "dist",
     emptyOutDir: true,
-    sourcemap: mode === 'development'
+    sourcemap: mode === 'development',
+    // Additional optimizations
+    minify: mode === 'production' ? 'esbuild' : false,
+    chunkSizeWarningLimit: 1600,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          react: ['react', 'react-dom'],
+          vendor: ['react-router-dom', 'react-hook-form'],
+        }
+      }
+    }
+  },
+  // Cache control for development
+  cacheDir: `./.vite`,
+  // Preview configuration
+  preview: {
+    port: 8080,
+    strictPort: true
   }
 }));
