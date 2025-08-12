@@ -27,9 +27,10 @@ const Footer = () => {
 
           {/* Copyright */}
           <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-            <span>© {currentYear} KanyozaTech. Made with</span>
-            <Heart className="h-4 w-4 text-red-500 fill-current" />
-            <span>by kanyoza.</span>
+            <span>© {currentYear} KanyozaTech.</span>
+            
+            
+              <span>Made with  <Heart className="h-4 w-4 text-red-500 fill-current" />  by kanyoza.</span>
           </div>
 
           {/* Back to Top */}

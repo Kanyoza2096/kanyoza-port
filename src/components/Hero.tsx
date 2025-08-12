@@ -90,7 +90,7 @@ const Hero = () => {
             <Button
               variant="outline"
               size="lg"
-              onClick={() => window.open('mailto:contact@kanyozatech.dev')}
+              onClick={() => window.open('mailto:kmadatso01@gmail.com')}
               className="glass border-primary/20 hover:bg-primary/10 text-lg px-8 py-6"
             >
               Get In Touch
@@ -103,7 +103,7 @@ const Hero = () => {
             {[
               { icon: Github, href: '#', label: 'GitHub' },
               { icon: Linkedin, href: '#', label: 'LinkedIn' },
-              { icon: Mail, href: 'mailto:contact@kanyozatech.dev', label: 'Email' }
+              { icon: Mail, href: 'mailto:kmadatso01@gmail.com', label: 'Email' }
             ].map(({ icon: Icon, href, label }) => (
               <a
                 key={label}
