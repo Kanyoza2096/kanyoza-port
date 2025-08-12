@@ -43,19 +43,19 @@ const Contact = () => {
     {
       icon: Mail,
       label: 'Email',
-      value: 'contact@kanyozatech.dev',
-      href: 'mailto:contact@kanyozatech.dev'
+      value: 'kmadalitso01@gmail.com',
+      href: 'mailto:kmadalitso01@gmail.com'
     },
     {
       icon: Phone,
       label: 'Phone',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567'
+      value: '0885161630',
+      href: 'tel:0885161630'
     },
     {
       icon: MapPin,
       label: 'Location',
-      value: 'San Francisco, CA',
+      value: 'Chiladzuru, Malawi',
       href: '#'
     }
   ];
@@ -64,7 +64,7 @@ const Contact = () => {
     {
       icon: Github,
       label: 'GitHub',
-      href: 'https://github.com/kanyozatech',
+      href: 'mailto:kanyoza2096@gmail.com',
       color: 'hover:text-white'
     },
     {
