@@ -8,8 +8,8 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
-  // Critical GitHub Pages configuration
-  base: "/kanyoza-port/", // Exactly matches your repository name
+  // Custom domain uses root path
+  base: "/", 
   plugins: [
     react(),
     mode === 'development' && componentTagger(),
